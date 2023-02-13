@@ -1,20 +1,59 @@
 import logo from './Poke-logo.svg';
 import { useState, useEffect } from 'react';
 import './App.css';
+import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-// URL to get the the first 10 generation 1 pokemon
-const pokeCall = "https://pokeapi.co/api/v2/pokemon?limit=10";
+
+// URL to get the the first 10 pokemon from generation 1 
+const pokeCallURL = "https://pokeapi.co/api/v2/pokemon?limit=10";
 
 
 function App() {
-  // State
+  // The list of pokemon will be stored in React state
   const [pokemonList, setPokemonList] = useState([]);
+  const [selectedPokemon, setSelectedPokemon] = useState([]);
+  const [isError, setIsError] = useState(false);
 
+  async function getPokemon() {
+    await fetch(pokeCallURL).then(res => {
+      // Simple error handling if API response is not successful
+      if (res.status !== 200) {
+        setIsError(true);
+      }
+      return res.json()
+    }).then((data) => {
+      // use destructuring to grab pokemon 
+      const { results } = data
+      setPokemonList(results)
+    });
+  }
 
+  // Make a call to get more details about a selected pokemon
+  async function getPokemonInfo(relatedUrl) {
+    await fetch(relatedUrl).then(res => {
+      if (res.status !== 200) {
+        setIsError(true)
+      }
+      return res.json()
+    }).then(data => {
+      setSelectedPokemon(data)
+    })
+  }
+
+  useEffect(() => {
+    getPokemon()
+  }, [])
+
+  console.log('List of pokemon in state', pokemonList)
   return (
     <>
-      {/* NB: This is how you get the images from public folder */}
-      {/* <img src='/Charmander.png' alt='charmander, the fire type starter from generation one' /> */}
+      {/* Header goes here */}
+
+      {
+        // if successful for Each starter, show the starter's name and image
+        isError ? <p>Sorry, there was an error </p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map()
+      }
       mic check
     </>
   );
