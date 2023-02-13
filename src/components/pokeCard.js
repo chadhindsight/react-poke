@@ -1,10 +1,15 @@
 import React from 'react';
+import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const pokeCard = () => {
+const pokeCard = ({ selectedPokemon, getPokemonInfo }) => {
     return (
-        <div>
+        <Col>
+            <Card>
+                {/* <img src='/Charmander.png' alt='charmander, the fire type starter from generation one' /> */}
 
-        </div>
+            </Card>
+        </Col>
     );
 };
 
