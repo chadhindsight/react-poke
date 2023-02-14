@@ -27,8 +27,8 @@ function App() {
       const { results } = data
       setPokemonList(results)
     });
-  }
 
+  }
   // Make a call to get more details about a selected pokemon
   async function getPokemonInfo(relatedUrl) {
     await fetch(relatedUrl).then(res => {
@@ -45,16 +45,18 @@ function App() {
     getPokemon()
   }, [])
 
-  console.log('List of pokemon in state', pokemonList)
+  console.log('List of pokemon in state', pokemonList, pokemonList[0])
   return (
     <>
       {/* Header goes here */}
-
-      {
-        // if successful for Each starter, show the starter's name and image
-        isError ? <p>Sorry, there was an error </p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map()
-      }
-      mic check
+      <Container align="center" className="container-sm mt-4">
+        {
+          // if successful for Each starter, show the starter's name and image
+          isError ? <p>Sorry, there was an error </p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map(pokemon => {
+            return <p>{pokemon.name}</p>
+          })
+        }
+      </Container>
     </>
   );
 }
