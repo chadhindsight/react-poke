@@ -40,14 +40,14 @@ function App() {
     }).then(data => {
       setSelectedPokemon(data)
     })
+    console.log(selectedPokemon)
   }
 
   useEffect(() => {
-    console.log('are you good?')
     getPokemon()
   }, [])
 
-  console.log('List of pokemon in state', pokemonList, pokemonList[0])
+  console.log('List of pokemon in local state', pokemonList)
   return (
     <>
       {/* Header goes here */}
@@ -55,8 +55,8 @@ function App() {
         <Row xs={1} md={3} className="g-4">
           {
             // if successful for Each starter, show the starter's name and image
-            isError ? <p>Sorry, there was an error </p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map(pokemon => {
-              return <PokeCard pokemon={pokemon} selectedPokemon={selectedPokemon} getPokemonInfo={getPokemon} />
+            isError ? <p>Sorry, there was an error </p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map((pokemon, i) => {
+              return <PokeCard key={i} pokemon={pokemon} selectedPokemon={selectedPokemon} getPokemonInfo={getPokemon} />
             })
           }
         </Row>
