@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PokeCard from './components/PokeCard';
 
 
 // URL to get the the first 10 pokemon from generation 1 
@@ -42,6 +43,7 @@ function App() {
   }
 
   useEffect(() => {
+    console.log('are you good?')
     getPokemon()
   }, [])
 
@@ -50,12 +52,14 @@ function App() {
     <>
       {/* Header goes here */}
       <Container align="center" className="container-sm mt-4">
-        {
-          // if successful for Each starter, show the starter's name and image
-          isError ? <p>Sorry, there was an error </p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map(pokemon => {
-            return <p>{pokemon.name}</p>
-          })
-        }
+        <Row xs={1} md={3} className="g-4">
+          {
+            // if successful for Each starter, show the starter's name and image
+            isError ? <p>Sorry, there was an error </p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map(pokemon => {
+              return <PokeCard pokemon={pokemon} selectedPokemon={selectedPokemon} getPokemonInfo={getPokemon} />
+            })
+          }
+        </Row>
       </Container>
     </>
   );
