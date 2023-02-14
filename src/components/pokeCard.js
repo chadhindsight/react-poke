@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
     return (
