@@ -8,7 +8,7 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
             <Card>
                 <Card.Body>
                     <Card.Img variant="top" src={`/${pokemon?.name}.png`} alt='charmander, the fire type starter from generation one' />
-                    <p>{pokemon?.name}</p>
+                    <h2>{pokemon?.name}</h2>
                 </Card.Body>
             </Card>
         </Col>
