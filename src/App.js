@@ -23,13 +23,13 @@ function App() {
       }
       return res.json()
     }).then((data) => {
-      // use destructuring to grab pokemon 
+      // use destructuring to get pokemon 
       const { results } = data
       setPokemonList(results)
     });
 
   }
-  // Make a call to get more details about a selected pokemon
+  // This makes a seperate call to get more details about a selected pokemon
   async function getPokemonInfo(relatedUrl) {
     await fetch(relatedUrl).then(res => {
       if (res.status !== 200) {
