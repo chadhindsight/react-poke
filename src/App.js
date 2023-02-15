@@ -32,6 +32,7 @@ function App() {
   // This makes a seperate call to get more details about a selected pokemon
   async function getPokemonInfo(relatedUrl) {
     await fetch(relatedUrl).then(res => {
+      // Simple error handling if API response is not successful
       if (res.status !== 200) {
         setIsError(true)
       }
