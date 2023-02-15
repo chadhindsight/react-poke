@@ -11,7 +11,6 @@ const pokeCallURL = "https://pokeapi.co/api/v2/pokemon?limit=10";
 
 
 function App() {
-  // The list of pokemon will be stored in React state
   const [pokemonList, setPokemonList] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState();
   const [isError, setIsError] = useState(false);
@@ -39,7 +38,6 @@ function App() {
       return res.json()
     }).then(data => {
       setSelectedPokemon(data)
-      console.log('selected:', selectedPokemon)
     })
 
   }
@@ -51,11 +49,11 @@ function App() {
   console.log('List of pokemon in local state', pokemonList)
   return (
     <>
-      {/* Header goes here */}
+      {/* Header component will go here */}
       <Container align="center" className="container-sm mt-4">
         <Row xs={1} md={3} className="g-4">
           {
-            // if successful for Each starter, show the starter's name and image
+            // if successful for each starter, show the starter's name and image
             isError ? <p>Sorry, there was an error </p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map((pokemon, i) => {
               return <PokeCard key={i} pokemon={pokemon} selectedPokemon={selectedPokemon} getPokemonInfo={getPokemonInfo} />
             })
