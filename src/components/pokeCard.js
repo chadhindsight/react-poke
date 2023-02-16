@@ -8,11 +8,11 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
                 <Card.Body>
                     <Card.Img variant="top" src={`/${pokemon?.name}.png`} alt={`${pokemon?.name}, one of the starters from generation one`} />
                     <h2>{pokemon?.name}</h2>
+                    <hr />
 
                     {
                         selectedPokemon?.name === pokemon?.name ?
                             <ul>
-                                <hr />
                                 <h4>Moves</h4>
                                 {selectedPokemon?.moves.slice(0, 5).map((currentItem, i) => {
                                     return <li key={i} style={{ listStyle: 'none' }}>
