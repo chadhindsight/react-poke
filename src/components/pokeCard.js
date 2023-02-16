@@ -2,16 +2,6 @@ import React from 'react';
 import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
 
 const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
-    // 
-    // function renderMoves(items) {
-    //     items.slice(0, 5).map((currentItem, i) => {
-    //         return (<li>
-    //             <Card.Text>{currentItem?.name}</Card.Text>
-    //         </li>)
-    //     })
-    // }
-
-
     return (
         <Col>
             <Card>
