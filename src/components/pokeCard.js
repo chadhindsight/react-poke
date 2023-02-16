@@ -13,7 +13,7 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
                     {
                         selectedPokemon?.name === pokemon?.name ?
                             <ul>
-                                <h4>Moves</h4>
+                                <Card.Subtitle>Moves:</Card.Subtitle>
                                 {selectedPokemon?.moves.slice(0, 5).map((currentItem, i) => {
                                     return <li key={i} style={{ listStyle: 'none' }}>
                                         <Card.Text>{currentItem?.move?.name}</Card.Text>
