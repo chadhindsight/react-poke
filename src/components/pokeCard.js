@@ -3,28 +3,30 @@ import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
 
 const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
     return (
-        <Col>
-            <Card>
-                <Card.Body>
-                    <Card.Img variant="top" src={`/${pokemon?.name}.png`} alt={`${pokemon?.name}, one of the starters from generation one`} />
-                    <h2>{pokemon?.name}</h2>
-                    <hr />
+        <Container align="center" className="container-sm mt-4">
+            <Col>
+                <Card>
+                    <Card.Body>
+                        <Card.Img variant="top" src={`/${pokemon?.name}.png`} alt={`${pokemon?.name}, one of the starters from generation one`} />
+                        <h2>{pokemon?.name}</h2>
+                        <hr />
 
-                    {
-                        selectedPokemon?.name === pokemon?.name ?
-                            <ul>
-                                <Card.Subtitle>Moves:</Card.Subtitle>
-                                {selectedPokemon?.moves.slice(0, 5).map((currentItem, i) => {
-                                    return <li key={i} style={{ listStyle: 'none' }}>
-                                        <Card.Text>{currentItem?.move?.name}</Card.Text>
-                                    </li>
-                                })}
-                            </ul> :
-                            <Button onClick={() => getPokemonInfo(pokemon.url)}>Learn More</Button>
-                    }
-                </Card.Body>
-            </Card>
-        </Col>
+                        {
+                            selectedPokemon?.name === pokemon?.name ?
+                                <ul>
+                                    <Card.Subtitle className='mb-2 text-muted'>Moves:</Card.Subtitle>
+                                    {selectedPokemon?.moves.slice(0, 5).map((currentItem, i) => {
+                                        return <li key={i} style={{ listStyle: 'none' }}>
+                                            <Card.Text>{currentItem?.move?.name}</Card.Text>
+                                        </li>
+                                    })}
+                                </ul> :
+                                <Button onClick={() => getPokemonInfo(pokemon.url)}>Learn More</Button>
+                        }
+                    </Card.Body>
+                </Card>
+            </Col>
+        </Container>
     );
 };
 
