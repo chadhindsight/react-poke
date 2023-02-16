@@ -6,7 +6,7 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
         <Col>
             <Card>
                 <Card.Body>
-                    <Card.Img variant="top" src={`/${pokemon?.name}.png`} alt='charmander, the fire type starter from generation one' />
+                    <Card.Img variant="top" src={`/${pokemon?.name}.png`} alt={`${pokemon?.name}, one of the starters from generation one`} />
                     <h2>{pokemon?.name}</h2>
                     <Button onClick={() => getPokemonInfo(pokemon.url)}>Learn More</Button>
                 </Card.Body>

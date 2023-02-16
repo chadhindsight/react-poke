@@ -55,7 +55,7 @@ function App() {
         <Row xs={1} md={3} className="g-4">
           {
             // if successful for each starter, show the starter's name and image
-            isError ? <p>Sorry, there was an error </p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map((pokemon, i) => {
+            isError ? <p>Sorry, there was an error fetching pokemon</p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map((pokemon, i) => {
               return <PokeCard key={i} pokemon={pokemon} selectedPokemon={selectedPokemon} getPokemonInfo={getPokemonInfo} />
             })
           }
