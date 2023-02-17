@@ -23,7 +23,7 @@ function App() {
       }
       return res.json()
     }).then((data) => {
-      // use destructuring to get pokemon 
+      // use destructuring to get pokemon and update the state with that info
       const { results } = data
       setPokemonList(results)
     });
