@@ -3,17 +3,20 @@ import { Card } from 'react-bootstrap';
 
 const Moves = ({ moves }) => {
     return (
-        <ul>
-            {
-                moves ? moves.slice(0, 5).map((currentMove, i) => {
-                    const { name } = currentMove.move
+        <>
+            <h4>Moves</h4>
+            <ul style={{ margiRight: "27px" }}>
+                {
+                    moves ? moves.slice(0, 5).map((currentMove, i) => {
+                        const { name } = currentMove.move
 
-                    return (<li key={i}>
-                        <Card.Text>{name}</Card.Text>
-                    </li>)
-                }) : null
-            }
-        </ul>
+                        return (<li key={i} style={{ listStyle: 'none' }}>
+                            <Card.Text>{name}</Card.Text>
+                        </li>)
+                    }) : null
+                }
+            </ul>
+        </>
     );
 };
 
