@@ -10,7 +10,7 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
                 <Card>
                     <Card.Body>
                         <Card.Img variant="top" src={`/${pokemon?.name}.png`} alt={`${pokemon?.name}, one of the starters from generation one`} />
-                        <h2>{pokemon?.name}</h2>
+                        <h2>{pokemon?.name.toUpperCase()}</h2>
                         <hr />
 
                         {
