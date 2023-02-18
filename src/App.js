@@ -1,7 +1,7 @@
 import logo from './Poke-logo.svg';
 import { useState, useEffect } from 'react';
 import './App.css';
-import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PokeCard from './components/PokeCard';
 
@@ -54,7 +54,6 @@ function App() {
       <Container align="center" className="container-sm mt-4">
         <Row xs={1} md={3} className="g-4">
           {
-            // if successful for each starter, show the starter's name and image
             isError ? <p>Sorry, there was an error fetching pokemon</p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map((pokemon, i) => {
               return <PokeCard key={i} pokemon={pokemon} selectedPokemon={selectedPokemon} getPokemonInfo={getPokemonInfo} />
             })
