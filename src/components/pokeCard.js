@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Button, Col, Card } from 'react-bootstrap';
 import Moves from './Moves';
+import Types from './Types';
 
 const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
 
@@ -15,7 +16,11 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
 
                         {
                             selectedPokemon?.name === pokemon?.name ?
-                                <Moves moves={selectedPokemon?.moves} /> :
+                                <>
+                                    <Moves moves={selectedPokemon?.moves} />
+                                    <Types />
+                                </>
+                                :
                                 <Button onClick={() => getPokemonInfo(pokemon.url)}>Learn More</Button>
                         }
                     </Card.Body>
