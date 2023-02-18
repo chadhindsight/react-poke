@@ -2,12 +2,15 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 
 const Moves = ({ moves }) => {
+    // Limit the list of moves shown to just the first 5
+    const firstFive = moves?.slice(0, 5);
+
     return (
         <>
             <h4>Moves</h4>
-            <ul style={{ margiRight: "27px" }}>
+            <ul className='ul-right'>
                 {
-                    moves ? moves.slice(0, 5).map((currentMove, i) => {
+                    moves ? firstFive.map((currentMove, i) => {
                         const { name } = currentMove.move
 
                         return (<li key={i} style={{ listStyle: 'none' }}>
