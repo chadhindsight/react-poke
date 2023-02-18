@@ -1,7 +1,9 @@
 import React from 'react';
-import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
+import { Container, Button, Col, Card } from 'react-bootstrap';
+import Moves from './Moves';
 
 const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
+
     return (
         <Container align="center" className="container-sm mt-4">
             <Col>
@@ -13,14 +15,7 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
 
                         {
                             selectedPokemon?.name === pokemon?.name ?
-                                <ul>
-                                    <Card.Subtitle className='mb-2 text-muted'>Moves:</Card.Subtitle>
-                                    {selectedPokemon?.moves.slice(0, 5).map((currentItem, i) => {
-                                        return <li key={i} style={{ listStyle: 'none' }}>
-                                            <Card.Text>{currentItem?.move?.name}</Card.Text>
-                                        </li>
-                                    })}
-                                </ul> :
+                                <Moves moves={selectedPokemon?.moves} /> :
                                 <Button onClick={() => getPokemonInfo(pokemon.url)}>Learn More</Button>
                         }
                     </Card.Body>
