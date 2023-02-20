@@ -18,7 +18,8 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
                             selectedPokemon?.name === pokemon?.name ?
                                 <>
                                     <Moves moves={selectedPokemon?.moves} />
-                                    <Types />
+                                    <hr />
+                                    <Types types={selectedPokemon?.types} />
                                 </>
                                 :
                                 <Button onClick={() => getPokemonInfo(pokemon.url)}>Learn More</Button>
