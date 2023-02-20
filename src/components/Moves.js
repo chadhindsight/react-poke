@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 
 const Moves = ({ moves }) => {
-    // Limit the list of moves shown to just the first 5 since we don't want to display all moves
+    // Limit the list of moves shown to just the first 5 since we don't want to display all moves.
     const firstFive = moves?.slice(0, 5);
 
     return (
