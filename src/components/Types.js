@@ -6,10 +6,10 @@ const Types = ({ types }) => {
         <>
             <h4>Pokemon Types</h4>
             {
-                types?.map((type) => {
+                types?.map((type, i) => {
                     const { name } = type.type
 
-                    return (<Card.Text>{name}</Card.Text>)
+                    return (<Card.Text key={i}>{name}</Card.Text>)
                 })
             }
         </>
