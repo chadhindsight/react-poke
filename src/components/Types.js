@@ -6,7 +6,7 @@ const Types = ({ types }) => {
         <>
             <h4>Pokemon Types</h4>
             {
-                types.map((type) => {
+                types?.map((type) => {
                     const { name } = type.type
 
                     return (<Card.Text>{name}</Card.Text>)
