@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap';
 const Types = ({ types }) => {
     return (
         <>
-            <h4>Types</h4>
+            <h4>Pokemon Types</h4>
             {
                 types.map((type) => {
                     const { name } = type.type
