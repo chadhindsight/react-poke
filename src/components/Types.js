@@ -2,8 +2,6 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 
 const Types = ({ types }) => {
-    console.log(types)
-
     return (
         <>
             <h4>Types</h4>
