@@ -1,9 +1,11 @@
 .App {
   text-align: center;
 }
-
+/* Reasses */
 .App-logo {
   height: 40vmin;
+    margin: auto;
+      width: 50%;
   pointer-events: none;
 }
 
