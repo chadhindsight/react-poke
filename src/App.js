@@ -1,9 +1,9 @@
-import logo from './Poke-logo.svg';
 import { useState, useEffect } from 'react';
 import './App.css';
 import { Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PokeCard from './components/PokeCard';
+import Header from './components/Header';
 
 
 // URL to get the the first 10 pokemon from generation 1 
@@ -50,7 +50,7 @@ function App() {
   console.log('List of pokemon in local state', pokemonList)
   return (
     <>
-      {/* Header component will go here */}
+      <Header />
       <Container align="center" className="container-sm mt-4">
         <Row xs={1} md={3} className="g-4">
           {

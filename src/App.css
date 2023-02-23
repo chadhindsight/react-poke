@@ -1,9 +1,10 @@
-.App {
+.Header {
   text-align: center;
 }
-
+/* Reasses */
 .App-logo {
   height: 40vmin;
+    margin: auto;
   pointer-events: none;
 }
 
