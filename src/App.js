@@ -51,6 +51,7 @@ function App() {
   return (
     <>
       <Header />
+      <hr />
       <Container align="center" className="container-sm mt-4">
         <Row xs={1} md={3} className="g-4">
           {
