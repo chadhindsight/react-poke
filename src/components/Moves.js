@@ -7,7 +7,6 @@ const Moves = ({ moves }) => {
 
     return (
         <>
-            {/* HOF */}
             <h4>Moves</h4>
             <ul className='ul-right'>
                 {
