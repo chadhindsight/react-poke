@@ -4,7 +4,7 @@ import Moves from './Moves';
 import Types from './Types';
 
 const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
-
+    console.log('ass', pokemon)
     return (
         <Container align="center" className="container-sm mt-4">
             <Col>
