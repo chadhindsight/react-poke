@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Button, Col, Card } from 'react-bootstrap';
-import Moves from './Moves';
-import Types from './Types';
+import Moves from './PokemonInfo/Moves';
+import Types from './PokemonInfo/Types';
 
 const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
 

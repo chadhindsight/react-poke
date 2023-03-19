@@ -4,7 +4,7 @@ import { Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PokeCard from './components/PokeCard';
 import Header from './components/Header';
-
+import Footer from './components/Footer';
 
 // URL to get the the first 10 pokemon from generation 1 
 const pokeCallURL = "https://pokeapi.co/api/v2/pokemon?limit=10";
@@ -61,6 +61,7 @@ function App() {
           }
         </Row>
       </Container>
+      <Footer />
     </>
   );
 }
