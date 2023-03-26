@@ -1,11 +1,10 @@
 import React from 'react';
-// import { Container, Button, Col, Card } from 'react-bootstrap';
 import Card from "@mui/material/Card";
 import CardContent from '@mui/material/CardContent';
 import Button from "@mui/material/Button";
 import Moves from './PokemonInfo/Moves';
 import Types from './PokemonInfo/Types';
-import { CardMedia, Grid, Typography } from '@mui/material';
+import { CardActions, CardMedia, Typography } from '@mui/material';
 
 const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
 
@@ -17,6 +16,7 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
                     sx={{ height: 350, width: 350 }}
                     image={`/${pokemon?.name}.png`}
                     title={`${pokemon?.name}, one of the starters from generation one`}
+                    style={{ paddingTop: "1 rem" }}
                 />
                 <hr />
                 <Typography gutterBottom variant="h4" component="div">
@@ -31,7 +31,9 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
                             <Types types={selectedPokemon?.types} />
                         </>
                         :
-                        <Button onClick={() => getPokemonInfo(pokemon.url)}>Learn More</Button>
+                        <CardActions>
+                            <Button onClick={() => getPokemonInfo(pokemon.url)}>Learn More</Button>
+                        </CardActions>
                 }
             </CardContent>
         </Card>
