@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import PokeCard from './components/PokeCard';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { Grid } from '@mui/material';
 
 // URL to get that returns first 10 pokemon from generation 1
 const pokeCallURL = "https://pokeapi.co/api/v2/pokemon?limit=10";
@@ -50,15 +51,17 @@ function App() {
     <>
       <Header />
       <hr />
-      <Container align="center" className="container-sm mt-4">
-        <Row xs={1} md={3} className="g-4">
-          {
-            isError ? <p>Sorry, there was an error fetching pokemon. Please try again.</p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map((pokemon, i) => {
-              return <PokeCard key={i} pokemon={pokemon} selectedPokemon={selectedPokemon} getPokemonInfo={getPokemonInfo} />
-            })
-          }
-        </Row>
-      </Container>
+      <Grid container spacing={8} justifyContent="center">
+        {
+          isError ? <p>Sorry, there was an error fetching pokemon. Please try again.</p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map((pokemon, i) => {
+            return (
+              <Grid key={i} item>
+                <PokeCard key={i} pokemon={pokemon} selectedPokemon={selectedPokemon} getPokemonInfo={getPokemonInfo} />
+              </Grid>
+            )
+          })
+        }
+      </Grid>
       <Footer />
     </>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import List from '@mui/material/List';
+import { ListItemText, Typography } from '@mui/material';
 
 const Moves = ({ moves }) => {
     // Limit the list of moves shown to just the first 5 since we don't want to display all moves.
@@ -7,18 +8,19 @@ const Moves = ({ moves }) => {
 
     return (
         <>
-            <h4>Moves</h4>
-            <ul className='ul-right'>
+            <Typography variant="h5">Moves</Typography>
+            <List>
                 {
                     moves ? firstFive.map((currentMove, i) => {
                         const { name } = currentMove.move
+                        const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1)
 
-                        return (<li key={i} style={{ listStyle: 'none' }}>
-                            <Card.Text>{name}</Card.Text>
-                        </li>)
+                        return (
+                            <ListItemText>{capitalizedName}</ListItemText>
+                        )
                     }) : null
                 }
-            </ul>
+            </List>
         </>
     );
 };

@@ -1,17 +1,23 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import List from '@mui/material/List';
+import { ListItemText, Typography } from '@mui/material';
 
 const Types = ({ types }) => {
     return (
         <>
-            <h4>Pokemon Types</h4>
-            {
+            <Typography variant="h5">Pokemon Types</Typography>
+            <List> {
                 types?.map((type, i) => {
                     const { name } = type.type
+                    const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1)
 
-                    return (<Card.Text key={i}>{name}</Card.Text>)
+
+                    return (<ListItemText key={i}>{capitalizedName}</ListItemText>)
                 })
             }
+            </List>
+
         </>
 
     );
