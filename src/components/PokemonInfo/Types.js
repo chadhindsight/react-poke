@@ -1,10 +1,11 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
 const Types = ({ types }) => {
     return (
         <>
-            <h4>Pokemon Types</h4>
+            <Typography variant="h5">Pokemon Types</Typography>
             {
                 types?.map((type, i) => {
                     const { name } = type.type
