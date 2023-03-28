@@ -5,9 +5,7 @@ import PokeCard from './components/PokeCard';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
-import Switch from '@mui/material/Switch';
-import Grid from '@mui/material/Grid';
+import { Paper, Switch, Grid } from '@mui/material';
 
 // URL to get that returns first 10 pokemon from generation 1
 const pokeCallURL = "https://pokeapi.co/api/v2/pokemon?limit=10";
