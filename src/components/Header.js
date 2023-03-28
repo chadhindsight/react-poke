@@ -9,7 +9,7 @@ const Header = () => {
                 <Typography variant='h2'>Pokewall
                     <CatchingPokemonIcon fontSize='inherit' />
                 </Typography>
-                <p className="lead">A place to learn about the original three starter Pokemon.</p>
+                <p className="lead">A place to learn about the original three starter Pokemon</p>
             </div>
         </AppBar>
     );
