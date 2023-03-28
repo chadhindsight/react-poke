@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import { Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PokeCard from './components/PokeCard';
 import Header from './components/Header';
@@ -53,8 +52,9 @@ function App() {
   useEffect(() => {
     getPokemon()
   }, [])
-  console.log('ewrewrewr', theme.palette)
+
   console.log('List of pokemon in local state', pokemonList)
+
   return (
     <>
       <ThemeProvider theme={theme}>
