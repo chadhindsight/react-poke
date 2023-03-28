@@ -22,7 +22,7 @@ function App() {
 
   const theme = createTheme({
     palette: {
-      type: isDarkMode ? "dark" : "light"
+      mode: isDarkMode ? "dark" : "light"
     }
   })
   async function getPokemon() {
@@ -53,7 +53,7 @@ function App() {
   useEffect(() => {
     getPokemon()
   }, [])
-  console.log('ewrewrewr', isDarkMode)
+  console.log('ewrewrewr', theme.palette)
   console.log('List of pokemon in local state', pokemonList)
   return (
     <>
