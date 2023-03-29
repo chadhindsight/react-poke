@@ -61,7 +61,7 @@ function App() {
           <hr />
           <Grid container spacing={8} justifyContent="center">
             {
-              isError ? <p>Sorry, there was an error fetching pokemon. Please try again.</p> : [pokemonList[0], pokemonList[3], pokemonList[6]].map((pokemon, i) => {
+              isError ? <Typography>Sorry, there was an error fetching pokemon. Please try again.</Typography> : [pokemonList[0], pokemonList[3], pokemonList[6]].map((pokemon, i) => {
                 return (
                   <Grid key={i} item>
                     <PokeCard key={i} pokemon={pokemon} selectedPokemon={selectedPokemon} getPokemonInfo={getPokemonInfo} />
