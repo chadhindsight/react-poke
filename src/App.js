@@ -24,7 +24,6 @@ function App() {
   })
   async function getPokemon() {
     await fetch(pokeCallURL).then(res => {
-      // Simple error handling if API response is not successful
       if (res.status !== 200) {
         setIsError(true);
       }
