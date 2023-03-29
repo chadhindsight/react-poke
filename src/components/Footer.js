@@ -7,22 +7,22 @@ import Github from '@mui/icons-material/GitHub';
 
 const Footer = () => {
     return (
-        <BottomNavigation sx={{ width: 500 }} className="foot">
+        <BottomNavigation sx={{ width: 600 }} className="foot">
             <hr />
-            <BottomNavigationAction
-                label="LinkedIn"
-                value="LinkedIn"
-                icon={<LinkedIn />}
-                target="_blank"
-                href='https://www.linkedin.com/in/chadrick-hinds'
-                rel="noreferrer"
-            />
             <BottomNavigationAction
                 label="Github"
                 value="Chad's Github"
                 icon={<Github />}
                 target="_blank"
                 href='https://github.com/chadhindsight'
+                rel="noreferrer"
+            />
+            <BottomNavigationAction
+                label="LinkedIn"
+                value="LinkedIn"
+                icon={<LinkedIn />}
+                target="_blank"
+                href='https://www.linkedin.com/in/chadrick-hinds'
                 rel="noreferrer"
             />
             <BottomNavigationAction
