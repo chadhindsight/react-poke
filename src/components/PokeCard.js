@@ -14,7 +14,7 @@ const PokeCard = ({ selectedPokemon, getPokemonInfo, pokemon }) => {
             <CardContent>
                 <CardMedia
                     sx={{ height: 350, width: 350 }}
-                    image={`/${pokemon?.name}.png`}
+                    image={`/images/${pokemon?.name}.png`}
                     title={`${pokemon?.name}, one of the starters from generation one`}
                     style={{ paddingTop: "1 rem" }}
                 />
