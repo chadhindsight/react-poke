@@ -18,7 +18,7 @@ const Footer = () => {
             />
             <BottomNavigationAction
                 label="LinkedIn"
-                value="LinkedIn"
+                value="Chad's LinkedIn"
                 icon={<LinkedIn />}
                 target="_blank"
                 href='https://www.linkedin.com/in/chadrick-hinds'
@@ -26,7 +26,7 @@ const Footer = () => {
             />
             <BottomNavigationAction
                 label="Portfolio"
-                value="Portfolio"
+                value=" Chad's Portfolio"
                 icon={<Person />}
                 target="_blank"
                 href='https://chadhindsight.github.io/'
