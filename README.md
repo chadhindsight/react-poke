@@ -6,7 +6,10 @@ This is a simple SPA that shows users a list of the first 3 starter Pokemon from
 
 ## How it works
 
-Once the page loads, a user is able to select on one of the three pokemon listed in order to learn more about that specific pokemon's Moves and Type.
+Once the page loads, a user is able to select on one of the three pokemon listed in order to learn more about that specific pokemon's Moves and Type. There is also a toggle tha enables the use of dark or light mode in the upper left corner of the page.
+
+![Light mode view](/public/images/Screen%20Shot%202023-04-04%20at%2011.52.15%20AM.png)
+![Dark mode view](/public/images/Screen%20Shot%202023-04-04%20at%2011.52.27%20AM.png)
 
 ## Getting Started with Create React App
 
