@@ -8,7 +8,6 @@ import Github from '@mui/icons-material/GitHub';
 const Footer = () => {
     return (
         <BottomNavigation sx={{ width: 600 }} className="foot">
-            <hr />
             <BottomNavigationAction
                 label="Github"
                 value="Chad's Github"

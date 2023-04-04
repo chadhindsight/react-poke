@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import PokeCard from './components/PokeCard';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -58,7 +57,6 @@ function App() {
         <Paper style={{ height: "100vh" }}>
           <Header />
           <Switch checked={isDarkMode} onChange={() => setIsDarkMode(!isDarkMode)} />
-          <hr />
           <Grid container spacing={8} justifyContent="center">
             {
               isError ? <Typography>Sorry, there was an error fetching pokemon. Please try again.</Typography> : [pokemonList[0], pokemonList[3], pokemonList[6]].map((pokemon, i) => {
