@@ -10,7 +10,7 @@ const Footer = () => {
         <BottomNavigation sx={{ width: 600 }} className="foot">
             <BottomNavigationAction
                 label="Github"
-                value="Chad's Github"
+                value="Chad's Github Profile"
                 icon={<Github />}
                 target="_blank"
                 href='https://github.com/chadhindsight'
