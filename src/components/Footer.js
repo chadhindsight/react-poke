@@ -16,6 +16,7 @@ const Footer = () => {
                 href='https://github.com/chadhindsight'
                 rel="noreferrer"
             />
+            {/* Bottom buttons */}
             <BottomNavigationAction
                 label="LinkedIn"
                 value="Chad's LinkedIn"
